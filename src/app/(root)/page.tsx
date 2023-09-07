@@ -1,12 +1,10 @@
 'use client'
 
 import { useStoreModal } from "@/hooks/use-store-modal";
-
 import { useEffect } from "react";
 
-
-
 const setupPage = () => {
+  prisma
 
   // to use StoreModal inside useEffect
   const onOpen = useStoreModal((state) => state.onOpen)
