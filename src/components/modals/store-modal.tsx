@@ -20,9 +20,6 @@ import { Button } from '@/components/ui/Button';
 
 
 // created a form with form validation with zod
-
-
-
 const formSchema = z.object({
     name: z.string().min(1),
 });

@@ -1,4 +1,3 @@
-// it’s time to decide which pages are public and which need to hide behind authentication
 import { authMiddleware } from "@clerk/nextjs";
 
 // This example protects all routes including api/trpc routes

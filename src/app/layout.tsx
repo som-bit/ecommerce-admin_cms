@@ -24,6 +24,7 @@ export default function RootLayout({
         <body className={inter.className}>
           {/*we are passing the modal provider here so that we can use it anywhere in our app to reuse our modal*/}
           <ModalProvider />
+         
           {children}
         </body>
       </html>
