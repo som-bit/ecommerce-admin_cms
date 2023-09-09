@@ -1,7 +1,6 @@
 'use client'
 
 import { useStoreModal } from "@/hooks/use-store-modal";
-import { UserButton } from "@clerk/nextjs";
 import { useEffect } from "react";
 
 const setupPage = () => {
@@ -15,10 +14,7 @@ const setupPage = () => {
     }
   }, [isOpen, onOpen])
   return (
-    <div className="p-4">
-      Root page
-      <UserButton afterSignOutUrl="/" />
-    </div>
+    null
   );
 }
 export default setupPage;
