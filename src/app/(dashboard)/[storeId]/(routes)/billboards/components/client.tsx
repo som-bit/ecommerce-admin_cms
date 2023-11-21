@@ -3,14 +3,14 @@
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { Separator } from "@/components/ui/Separator";
-import { DataTable } from "@/components/ui/data-table"
+import { DataTable } from "@/components/ui/Data-table"
 
 
 import { Plus } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 
 import { BillboardColumn, columns } from "./columns"
-import { ApiList } from "@/components/ui/api-list";
+import { ApiList } from "@/components/ui/Api-list";
 
 // interface to add data to billboard to modify the heading and manage billboard
 //and add more div in the billboard page
@@ -42,7 +42,7 @@ const BillboardClient: React.FC<BillboardClientProps> = ({
             <DataTable columns={columns} data={data} searchKey="label" />
             <Heading title="API" description="Api Calls for billboard" />
             <Separator />
-            <ApiList  entityName="billboards" entityIdName="billboardId" />
+            <ApiList entityName="billboards" entityIdName="billboardId" />
         </>
     );
 }

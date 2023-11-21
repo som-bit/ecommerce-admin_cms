@@ -3,14 +3,14 @@
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { Separator } from "@/components/ui/Separator";
-import { DataTable } from "@/components/ui/data-table"
+import { DataTable } from "@/components/ui/Data-table"
 
 
 import { Plus } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 
 import { CategoryColumn, columns } from "./columns"
-import { ApiList } from "@/components/ui/api-list";
+import { ApiList } from "@/components/ui/Api-list";
 
 // interface to add data to billboard to modify the heading and manage billboard
 //and add more div in the billboard page
@@ -32,7 +32,7 @@ const CategoryClient: React.FC<CategoryClientProps> = ({
                     title={`Categories (${data.length})`}
                     description="Manage Categories for your store"
                 />
-                <Button onClick={() => router.push(`/${params.storeId}/Categories/new`)}>
+                <Button onClick={() => router.push(`/${params.storeId}/categories/new`)}>
                     <Plus className="mr-2 h-4 w-4" />
                     Add new
                 </Button>
@@ -42,7 +42,7 @@ const CategoryClient: React.FC<CategoryClientProps> = ({
             <DataTable columns={columns} data={data} searchKey="name" />
             <Heading title="API" description="Api Calls for Categories" />
             <Separator />
-            <ApiList  entityName="categories" entityIdName="categoryId" />
+            <ApiList entityName="categories" entityIdName="categoryId" />
         </>
     );
 }
